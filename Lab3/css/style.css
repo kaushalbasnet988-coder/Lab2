@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ddd;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 10px 14px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 14px;
+  font-size: 14px;
+}
+
+.nav-left a:last-child,
+.nav-right a:last-child {
+  margin-right: 0;
+}
+
+.layout {
+  width: 100%;
+  height: calc(100vh - 44px - 36px);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 180px 1fr;
+  gap: 0;
+  padding: 0;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #111;
+  overflow: hidden;
+}
+
+.rocket {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.solar {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.rover {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.text {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  padding: 14px;
+  overflow: auto;
+}
+
+.panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+}
